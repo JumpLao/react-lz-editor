@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --port 4000 --devtool eval --progress --colors --hot --content-base build && lessc src/global/supports/resources/system.less src/global/supports/resources/system.css",
     "release": "webpack -p --progress --colors --config webpack.release.config.js",
     "publish": "babel -d publish/ src/ --no-comments && lessc src/global/supports/resources/system.less publish/global/supports/resources/system.css",
-    "install": "npm run build"
+    "install": "npm run publish"
   },
   "repository": {
     "type": "git",
