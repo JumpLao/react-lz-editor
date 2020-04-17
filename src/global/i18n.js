@@ -618,7 +618,7 @@ module.exports = {
           southCenter: "nam - trung tâm",
           southEast: "nam - đông"
         }
-      }
+      },
     'th': {
         cancelText: "ยกเลิก",
         OKText: "ตกลง",
