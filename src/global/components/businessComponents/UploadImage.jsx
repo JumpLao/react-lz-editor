@@ -204,9 +204,7 @@ class UploadImage extends Component {
 
   render() {
     let {isMultiple, isShowUploadList, uploadProps} = this.props,that=this;
-    uploadProps = uploadProps&&Object.keys(uploadProps).length>0
-    ?uploadProps
-    :({
+    uploadProps = {
       action: PRO_URL.QINIU_URL||this.props.uploadConfig.QINIU_URL,
       onChange: this.onChange.bind(this),
       listType: 'picture',
@@ -224,8 +222,9 @@ class UploadImage extends Component {
         },
       multiple: isMultiple || false,
       beforeUpload: this.beforeUpload.bind(this),
-      showUploadList: isShowUploadList !== undefined ? isShowUploadList : true
-    });
+      showUploadList: isShowUploadList !== undefined ? isShowUploadList : true,
+      ...uploadProps
+    };
     // console.log("uploadProps",uploadProps);
 
     return (
